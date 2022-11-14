@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: lavender;
+}
+.nav{
+    float: right;
+}
+.nav li{
+    float:left;
+    list-style-type: none;
+ 
+}
+.nav li a{
+    padding: 5px;
+    margin: 10px;
+    display: block;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 12px;
+}
+.lgo{
+    float: left;
+    margin-left: 20px;
+    text-decoration: none;
+}
+.lgo .nav li a:hover{
+                background-color: rgba(0,0,0,0.3);
+                
+}
+.nav li a:hover{
+    color:brown;
+    background-color:beige;
+   
+}

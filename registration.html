@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <script type="text/javascript">
+        function fun1() {
+            document.getElementById("id5").innerHTML = "Login Here";
+            document.getElementById("user").style.display = "none";
+            document.getElementById("cnf").style.display = "none";
+            //  alert("hello");
+        }
+        function fu2() {
+            var a = document.getElementById("id4").value;
+            var b = document.getElementById("cnf").value;
+            if (a == b) {
+                alert("Your Response is submitted");
+            }
+            else {
+                alert("Password mismatch");
+            }
+        }
+        function fun3() {
+            document.getElementById("user").style.display = "block";
+            document.getElementById("id5").innerHTML = "Register Here";
+            document.getElementById("cnf").style.display = "block";
+        }
+    </script>
+
+
+    <style>
+        body {
+            background-color: #5e9494;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: auto;
+            outline: none;
+        }
+
+        div {
+            width: 190px;
+            margin: auto;
+        }
+
+        #user {
+            margin-top: 30px;
+        }
+
+        #first {
+            box-sizing: border-box;
+
+        }
+
+        #reg {
+            display: block;
+            width: fit-content;
+            margin-top: 20px;
+        }
+
+        .inl {
+            display: inline;
+            width: fit-content;
+            border-left: 1px solid #000;
+            border-radius: 30px;
+            height: 40px;
+            margin: auto;
+        }
+
+        #id1 {
+            display: inline;
+            font-size: 20px;
+            width: 85px;
+        }
+
+        #id2 {
+            margin-top: 20px;
+        }
+
+        .num {
+
+            border-left: 1px solid #000;
+            border-radius: 30px;
+            height: 40px;
+            margin-bottom: 4000px;
+            margin: auto;
+            margin-top: 40px;
+            padding: 20px;
+        }
+
+        #id3 {
+            display: block;
+            border-left: 1px solid #000;
+            border-radius: 30px;
+            height: 40px;
+            margin-bottom: 4000px;
+            margin: auto;
+            margin-top: 20px;
+            padding: 20px;
+
+        }
+
+        #id4 {
+            display: block;
+            border-left: 1px solid #000;
+            border-radius: 30px;
+            height: 40px;
+            margin-bottom: 4000px;
+            margin: auto;
+            margin-top: 20px;
+            padding: 20px;
+            cursor: text;
+        }
+
+        #cnf {
+            display: block;
+            border-left: 1px solid #000;
+            border-radius: 30px;
+            height: 40px;
+            margin-bottom: 4000px;
+            margin: auto;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        #id6 {
+            display: inline;
+            font-size: 20px;
+        }
+
+        #id7 {
+            display: block;
+            margin: auto;
+            width: fit-content;
+            margin-top: 20px;
+            height: 40px;
+            border-radius: 30px;
+            font-size: 30px;
+        }
+
+        #id8 {
+            margin-top: 20px;
+            display: inline-block;
+            font-size: medium;
+            font: bold;
+        }
+
+        #id5 {
+            display: inline-block;
+            height: 40px;
+            margin: auto;
+            width: fit-content;
+            margin-top: 20px;
+        }
+    </style>
+    <style>
+        #image {
+            display: block;
+            float: left;
+            top: 20px;
+            left: 60px;
+        }
+
+        #image img {
+            width: 90%;
+            height: 150px;
+            margin-left: 10px;
+            margin-top: 20px;
+            vertical-align: text-bottom;
+        }
+
+        #image p {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        #id6 {
+            font-display: block;
+        }
+
+        #nav {
+            display: block;
+            width: fit-content;
+            margin: 10px auto;
+        }
+
+        #nav1 li {
+
+            display: inline-block;
+            font-size: 25px;
+            width: fit-content;
+            margin-top: 20px;
+
+        }
+
+        #nav1 li a {
+            color: rgb(14, 13, 13);
+            width: 50%;
+            width: fit-content;
+            margin-top: 10px;
+            margin: auto;
+            padding: 5px;
+            text-decoration: none;
+        }
+
+        #nav1 li a:hover {
+            color: rgb(110, 71, 71);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <?php 
+include 'dbcon.php';
+if(isset($_POST['submit'])){
+    $username= mysqli_real_escape_string($con,$_POST['username']);
+    $email= mysqli_real_escape_string($con,$_POST['email']);
+    $password= mysqli_real_escape_string($con,$_POST['password']);
+    $conform= mysqli_real_escape_string($con,$_POST['conform']);
+
+    $pass= password_hash($password, PASSWORD_BCRYPT);
+    $cpass=password_hash($conform, PASSWORD_BCRYPT);
+
+    $emailq= "select * from reg where email='$email'";
+    $query = mysqli_query($con,$emailq);
+
+    $emailcount = mysqli_num_rows($query);
+
+    if($emailcount > 0){
+        ?>
+        <script>
+            alert("already exist");
+            </script>
+            <?php
+    }else{
+        $inserti ="insert into reg (username,email,password,conform) values('$username','$email','$pass','$cpass')";
+        $iquery = mysqli_query($con, $inserti);   
+    }
+
+}
+    ?> -->
+    <form action="" method="POST">
+
+        <div id="nav">
+            <ul id="nav1">
+                <li><a href="layout.html">Home</a></li>
+
+                <li><a href="place.html">Destination
+                <li></a></li>
+                <li><a href="#">
+                <li>Sign Up</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+
+            <div id="first">
+                <div id="reg">
+                    <input type="button" id="id6" class="inl" value="Sign Up" onclick="fun3()" />
+                    <input type="button" id="id1" class="inl" value="Login" onclick="fun1()" />
+                </div>
+                <h1 id="id5"> Register Here </h1>
+                <input type="text" id="user" class="num" placeholder="UserName" name="username" />
+                <!--<input type="text" id="id2" class="num" placeholder="Mobile number" />-->
+                <input type="email" name="email" id="id3" placeholder="Email id" style="display: block;" required />
+                <input type="password" name="password" id="id4" class='pas' placeholder="Password"
+                    style="display: block;" required />
+                <input type="password" name="conform" id="cnf" class='pas' placeholder="Conform Password"
+                    style="display: block;" required />
+                <input type="checkbox" name="checkbox" id="id8" /> <span style="font-size:20px;" required>I declared
+                </span>
+                <input type="submit" name="submit" id="id7" value="Submit" onclick="fu2()" required />
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

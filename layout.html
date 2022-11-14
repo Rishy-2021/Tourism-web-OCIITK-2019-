@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+
+    <script type="text/javascript">
+      function fun1() {
+          document.getElementById("id5").innerHTML="Login Here";
+       document.getElementById("user").style.display="none";
+       document.getElementById("cnf").style.display="none";
+        //  alert("hello");
+      }
+      function fu2(){
+          var a=document.getElementById("id4"). value ;
+          var b=document.getElementById("cnf"). value ;
+          if (a == b){
+              alert("Your Response is submitted");
+          }
+      else{
+          alert("Password mismatch");
+      }
+      }
+      function fun3(){
+          document.getElementById("user").style.display="block";
+          document.getElementById("id5").innerHTML="Register Here";
+          document.getElementById("cnf").style.display="block";
+      }
+  </script>
+  
+    <link rel="stylesheet"href="layout.css">
+</head>
+<body>
+    <div class="navbars">
+        
+            <ul class="navs">
+                <li><a href="contact.html"> Contact Us</a></li>
+                <li><a href="registration.html"> Sign Up</a></li>
+                <li><a href="place.html">Destinations</a></li>
+                <li><a>Home</a></li>        
+             </ul>
+            <div class="lgo">
+            <ul class="nav">  
+           
+                    <li><a class="siz"> <img src="tlimages/logo.png" style="width: 220px;"></a> </li>
+                   
+                </ul>
+            </div>
+    </div>    
+  
+ <div class="lsidebar">
+     <div class="sub">
+
+         <form action="" method="POST">
+      
+          <div id="nav">
+      
+          
+      <div id="first">
+          <div id="reg">
+                  <input type="button" id="id6" class="inl" value="Sign Up" onclick="fun3()" />
+                  <input type="button" id="id1" class="inl" value="Login" onclick="fun1()"/>
+          </div>
+          <h1 id="id5"> Register Here </h1>
+          <input type="text" id ="user" class="num" placeholder="UserName" name="username"/>
+          <!--<input type="text" id="id2" class="num" placeholder="Mobile number" />-->
+          <input type="email" name="email" id="id3" placeholder="Email id" style="display: block;" required/>
+          <input type="password" name="password"id="id4" class='pas' placeholder="Password"  style="display: block;" required  />
+          <input type="password" name="conform"id="cnf" class='pas' placeholder="Conform Password" style="display: block;" required />
+          <input type="checkbox"name="checkbox" id="id8" /> <span style="font-size:20px;" required>I declared </span>
+          <input type="submit" name="submit"id="id7" value="Submit" onclick="fu2()" required/>
+      </div>
+    </div>
+  </form>
+
+    </div>
+ </div>
+    <div class="rsidebar">
+     
+  <div class="babu">
+       
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+ <!-- <div class="numbertext">1 / 3</div>-->
+  <img src="tlimages/image5.jpg" style="width:471%; height:81.9vh;">
+  <div class="text">Red fort</div>
+</div>
+
+<div class="mySlides fade">
+<!--  <div class="numbertext">2 / 3</div>-->
+  <img src="tlimages/tourist palas/bgm2.jpg" style="width:471%; height:81.9vh;">
+  <div class="text">Tajmahal</div>
+</div>
+
+<div class="mySlides fade">
+ <!-- <div class="numbertext">3 / 3</div>-->
+  <img src="tlimages/image6.jpg" style="width:471%; height:81.9vh;">
+  <div class="text">Golden Temple</div>
+</div>
+
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+    </div>
+  </div>
+    <div class="otp">
+        <h1>OUR TOP PLACES</h1>
+        <div class="gallery">
+            <a target="_blank" href="tlimages/image1.jpg">
+              <img src="tlimages/image1.jpg" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <div class="desc">Tajmahal- The Symbol of love & and Beauty<br>Agra(Utter Pradesh)</div>
+          </div>
+          
+          <div class="gallery">
+            <a target="_blank" href="tlimages/image2.jpg">
+              <img src="tlimages/image2.jpg" alt="Forest" width="600" height="400">
+            </a>
+            <div class="desc">The Golden Temple<br>Amritsar(Panjab)</div>
+          </div>
+          
+          <div class="gallery">
+            <a target="_blank" href="tlimages/image3.jpg">
+              <img src="tlimages/image3.jpg" alt="Northern Lights" width="600" height="400">
+            </a>
+            <div class="desc">India Gate<br>New Delhi</div>
+          </div>
+          
+          <div class="gallery">
+            <a target="_blank" href="tlimages/image4.jpg">
+              <img src="tlimages/image4.jpg" alt="Mountains" width="600" height="400">
+            </a>
+            <div class="desc">The Statue of Unity , World largest Statue<br>Sardar Sarovar Dam (Gujarat) </div>
+          </div>
+          
+        </di>
+   
+  <!-- <?php 
+include 'dbcon.php';
+if(isset($_POST['submit'])){
+    $username= mysqli_real_escape_string($con,$_POST['username']);
+    $email= mysqli_real_escape_string($con,$_POST['email']);
+    $password= mysqli_real_escape_string($con,$_POST['password']);
+    $conform= mysqli_real_escape_string($con,$_POST['conform']);
+
+    $pass= password_hash($password, PASSWORD_BCRYPT);
+    $cpass=password_hash($conform, PASSWORD_BCRYPT);
+
+    $emailq= "select * from reg where email='$email'";
+    $query = mysqli_query($con,$emailq);
+
+    $emailcount = mysqli_num_rows($query);
+
+    if($emailcount > 0){
+    ?>
+        <script>
+            alert("already exist");
+            </script>
+   <?php
+    }else{
+        $inserti ="insert into reg (username,email,password,conform) values('$username','$email','$pass','$cpass')";
+        $iquery = mysqli_query($con, $inserti);   
+    }
+
+}
+    ?>-->
+   
+  
+    
+    </div>
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 4000); 
+      }
+      </script>
+
+     
+<div class="foot">
+  <div class="sub_foot">
+    <ul class="foot-links">
+      <li><a href="layout.html"><h3>Home</h3></a></li><br>
+      <li><a href="#"><h3>Destinations</h3></a></li><br>
+      <li><a href="registration.html"><h3>Sign Up</h3></a></li><br>
+      <li><a href="contact.html"><h3>Contact Us</h3></a></li><br>
+    </ul>
+   
+      <div class="copyright">
+          <p class="copy">Copyright &copy; 2021 All Rights Reserved by OCIITK batch 2020-B <br>click here for more informations
+       <a href="contact.html">Contact Us</a>.
+          </p>
+        
+  </div>
+</div>
+</body>
+</html>
